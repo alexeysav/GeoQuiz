@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">The GeoQuiz </string>
+    <string name="name_hint">Tell us your name</string>
+    <string name="welcome_text">You are welcome to test your knowlege</string>
+    <string name="Question1">What is LARGER by the area?</string>
+    <string name="Question2">What is SMALLER by the area?</string>
+    <string name="Question3">What is larger by population?</string>
+    <string name="Question4">What is the name of this country?</string>
+    <string name="thank_you">Thank you for taking this Quiz</string>
+</resources>
