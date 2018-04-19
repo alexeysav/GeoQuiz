@@ -3,10 +3,9 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_height="wrap_content"
     android:layout_width="match_parent">
-
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/horizontal_padding"
         android:layout_marginLeft="@dimen/vertical_padding"
         android:layout_marginRight="@dimen/vertical_padding"
@@ -20,9 +19,8 @@
     android:textAllCaps="true"
     android:textAlignment="center"
     android:textStyle="bold"
-    android:textSize="15dp"
+    android:textSize="15sp"
     android:textColor="@color/some_color"/>
-
         <EditText
             android:id="@+id/input_name"
             android:layout_width="match_parent"
@@ -30,7 +28,6 @@
             android:hint="@string/name_hint"
             android:inputType="textCapWords"
             android:layout_marginBottom="16dp"/>
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -38,75 +35,65 @@
             android:text="@string/Question1"
             android:textAllCaps="false"
             android:textColor="@color/some_color"/>
-
         <ImageView
+            android:contentDescription="@string/image1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:scaleType="centerCrop"
             android:src="@drawable/finport"
             android:layout_gravity="center"/>
-<LinearLayout
-    android:layout_width="match_parent"
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:paddingBottom="@dimen/vertical_padding2">
+    <RadioButton
+        android:id="@+id/question1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/option1_1"
+        android:textAppearance="?android:textAppearanceMedium"/>
+        <RadioButton
+    android:id="@+id/question1_2"
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:orientation="horizontal">
-        <CheckBox
-            android:id="@+id/question1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="0dp"
-            android:paddingLeft="24dp"
-            android:text="Finland"
-            android:textSize="16sp"
-            android:layout_weight="1"/>
-
-        <CheckBox
-            android:id="@+id/question1.2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:paddingLeft="24dp"
-            android:text="Portugal"
-            android:textSize="16sp"
-            android:layout_weight="1"/>
-</LinearLayout>
+    android:text="@string/option1_2"
+    android:textAppearance="?android:textAppearanceMedium"/>
+    </RadioGroup>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
-            android:text="@string/Question1"
+            android:text="@string/Question3"
             android:textAllCaps="false"
             android:textColor="@color/some_color"/>
-
         <ImageView
+            android:contentDescription="@string/image2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:scaleType="centerCrop"
             android:src="@drawable/frpl"
             android:layout_gravity="center"/>
-        <LinearLayout
+        <RadioGroup
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <CheckBox
-                android:id="@+id/left_checkbox"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:paddingBottom="@dimen/vertical_padding2">
+            <RadioButton
+                android:id="@+id/question2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="0dp"
-                android:paddingLeft="24dp"
-                android:text="France"
-                android:textSize="16sp"
-                android:layout_weight="1"/>
-
-            <CheckBox
-                android:id="@+id/right_checkbox"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:paddingLeft="24dp"
-                android:text="Poland"
-                android:textSize="16sp"
-                android:layout_weight="1"/>
-        </LinearLayout>
+                android:text="@string/option2_1"
+                android:textAppearance="?android:textAppearanceMedium"/>
+            <RadioButton
+            android:id="@+id/question2_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/option2_2"
+            android:textAppearance="?android:textAppearanceMedium"/>
+        </RadioGroup>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -114,37 +101,32 @@
             android:text="@string/Question2"
             android:textAllCaps="false"
             android:textColor="@color/some_color"/>
-
         <ImageView
+            android:contentDescription="@string/image3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:scaleType="centerCrop"
             android:src="@drawable/ukdk"
             android:layout_gravity="center"/>
-        <LinearLayout
+        <RadioGroup
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <CheckBox
-                android:id="@+id/left_checkbox"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:paddingBottom="@dimen/vertical_padding2">
+            <RadioButton
+                android:id="@+id/question3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="0dp"
-                android:paddingLeft="24dp"
-                android:text="United Kingdom"
-                android:textSize="16sp"
-                android:layout_weight="1"/>
-
-            <CheckBox
-                android:id="@+id/right_checkbox"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:paddingLeft="24dp"
-                android:text="Danmark"
-                android:textSize="16sp"
-                android:layout_weight="1"/>
-        </LinearLayout>
+                android:text="@string/option3_1"
+                android:textAppearance="?android:textAppearanceMedium"/>
+            <RadioButton
+            android:id="@+id/question3_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/option3_2"
+            android:textAppearance="?android:textAppearanceMedium"/>
+        </RadioGroup>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -152,8 +134,8 @@
             android:text="@string/Question1"
             android:textAllCaps="false"
             android:textColor="@color/some_color"/>
-
         <ImageView
+            android:contentDescription="@string/image4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:scaleType="centerCrop"
@@ -163,25 +145,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
-            <CheckBox
-                android:id="@+id/left_checkbox"
-                android:layout_width="wrap_content"
+            <EditText
+                android:id="@+id/textAnswer"
+                android:hint="@string/answer_hint"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="0dp"
-                android:paddingLeft="24dp"
-                android:text="Latvia"
-                android:textSize="16sp"
-                android:layout_weight="1"/>
-
-            <CheckBox
-                android:id="@+id/right_checkbox"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:paddingLeft="24dp"
-                android:text="Cyprus"
-                android:textSize="16sp"
-                android:layout_weight="1"/>
+                android:inputType="textCapWords"
+                android:paddingBottom="@dimen/vertical_padding2"/>
         </LinearLayout>
         <TextView
             android:layout_width="wrap_content"
@@ -190,14 +160,13 @@
             android:text="@string/Question4"
             android:textAllCaps="false"
             android:textColor="@color/some_color"/>
-
         <ImageView
+            android:contentDescription="@string/image5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:scaleType="centerCrop"
             android:src="@drawable/cr"
             android:layout_gravity="center"/>
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -208,49 +177,45 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="0dp"
                 android:paddingLeft="24dp"
-                android:text="Greece"
+                android:text="@string/checkbox1"
                 android:textSize="16sp"
                 android:layout_weight="1"/>
-
             <CheckBox
                 android:id="@+id/checkbox2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="0dp"
                 android:paddingLeft="24dp"
-                android:text="Croatia"
+                android:text="@string/checkbox2"
                 android:textSize="16sp"
                 android:layout_weight="1"/>
             <CheckBox
                 android:id="@+id/checkbox3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
+                android:layout_marginBottom="@dimen/vertical_padding2"
                 android:paddingLeft="24dp"
-                android:text="Albania"
+                android:text="@string/checkbox3"
                 android:textSize="16sp"
                 android:layout_weight="1"/>
         </LinearLayout>
-
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:layout_marginBottom="20dp"
             android:onClick="submitAnswer"
-            android:text="submit answers"
+            android:text="@string/submit_button"
             android:layout_gravity="center" />
-
         <TextView
             android:id="@+id/results_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="40dp"
-            android:text="QUIZ RESULTS:"
+            android:text="@string/Results"
             android:textAllCaps="false"
             android:textColor="@color/colorPrimaryDark"
-            android:textStyle="bold"/>
-
+            android:textStyle="bold">
+        </TextView>
     </LinearLayout>
-
 </ScrollView>

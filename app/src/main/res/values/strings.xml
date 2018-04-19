@@ -1,10 +1,27 @@
 <resources>
     <string name="app_name">The GeoQuiz </string>
     <string name="name_hint">Tell us your name</string>
-    <string name="welcome_text">You are welcome to test your knowlege</string>
+    <string name="answer_hint">Type your guess here</string>
+    <string name="welcome_text">You are welcome to test your knowledge</string>
+    <string name="submit_button">submit answers</string>
+    <string name="Results">QUIZ RESULTS: </string>
     <string name="Question1">What is LARGER by the area?</string>
+    <string name="option1_1">Finland</string>
+    <string name="option1_2">Portugal</string>
     <string name="Question2">What is SMALLER by the area?</string>
-    <string name="Question3">What is larger by population?</string>
-    <string name="Question4">What is the name of this country?</string>
+    <string name="option2_1">France</string>
+    <string name="option2_2">Poland</string>
+    <string name="Question3">What is larger by POPULATION?</string>
+    <string name="option3_1">United Kingdom</string>
+    <string name="option3_2">Denmark</string>
+    <string name="Question4">Select correct statements</string>
+    <string name="checkbox1">European Country</string>
+    <string name="checkbox2">Asian country</string>
+    <string name="checkbox3">Has sea border</string>
     <string name="thank_you">Thank you for taking this Quiz</string>
+    <string name="image1">Finland or Portugal?</string>
+    <string name="image2">France of Poland?</string>
+    <string name="image3">UK or Denmark?</string>
+    <string name="image4">Latvia or Cyprus?</string>
+    <string name="image5">Greece, Croatia or Albania?</string>
 </resources>
