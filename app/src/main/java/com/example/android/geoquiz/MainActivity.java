@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
 //  This method is called when the submit answer button is clicked.
 
     public void submitAnswer(View view) {
-        checkAnswer2();
+        baseScore = checkAnswer2();
         checkAnswer(R.id.question1);
         checkAnswer(R.id.question2);
         checkAnswer(R.id.question3);
@@ -84,7 +84,8 @@ public class MainActivity extends AppCompatActivity {
 
     private void displayMessage(String message) {
         TextView answerSummaryTextView = (TextView) findViewById(R.id.results_text);
-        answerSummaryTextView.setText(message);
+//        answerSummaryTextView.setText(message); // Leaving this line intentionally, so I could get back to it fast
+        Toast.makeText(this, message, Toast.LENGTH_LONG).show();
     }
 
 //     Creates answer summary.

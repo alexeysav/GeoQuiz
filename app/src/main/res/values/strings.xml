@@ -4,7 +4,7 @@
     <string name="answer_hint">Type your guess here</string>
     <string name="welcome_text">You are welcome to test your knowledge</string>
     <string name="submit_button">submit answers</string>
-    <string name="Results">QUIZ RESULTS: </string>
+    <string name="Results">  </string>
     <string name="Question1">What is LARGER by the area?</string>
     <string name="option1_1">Finland</string>
     <string name="option1_2">Portugal</string>
