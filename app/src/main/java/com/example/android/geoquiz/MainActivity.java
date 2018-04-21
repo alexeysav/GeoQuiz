@@ -12,20 +12,16 @@ import android.widget.Toast;
 import com.example.android.geoquiz.R;
 
 //  This app displays quiz questions and results.
-
 public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
-
     int baseScore;
     int rightAnswerCount;
     int wrongAnswerCount;
-
 //  Calculates score and right/wrong answer count
-
     void calculateScore(boolean rightAnswer) {
         if (rightAnswer) {
             baseScore = baseScore + 2;
@@ -35,9 +31,7 @@ public class MainActivity extends AppCompatActivity {
             wrongAnswerCount++;
         }
     }
-
 //  This method is called when the submit answer button is clicked.
-
     public void submitAnswer(View view) {
         baseScore = checkAnswer2();
         checkAnswer(R.id.question1);
@@ -50,46 +44,47 @@ public class MainActivity extends AppCompatActivity {
         String inputName = nameField.getEditableText().toString();
 
         String resultsMessage = createAnswerSummary(inputName);
-
 //  Displays the game result on the screen
         displayMessage(resultsMessage);
         baseScore = 0;
         rightAnswerCount = 0;
         wrongAnswerCount = 0;
     }
-
+//  Calculates answers in questions with radiobuttons
     private void checkAnswer(int rightRadiobuttnId) {
         RadioButton rightOne = (RadioButton) findViewById(rightRadiobuttnId);
         boolean rightAnswer = rightOne.isChecked();
         calculateScore(rightAnswer);
     }
-
+//  Calculates answers in questions with checkboxes
     private void checkAnswer3(int rightCheckboxId) {
         CheckBox rightOne = (CheckBox) findViewById(rightCheckboxId);
         boolean rightAnswer = rightOne.isChecked();
         calculateScore(rightAnswer);
     }
-
-    //    DOES NOT WORK!!
+//  Calculates answers in "Type your guess" kind question
     public int checkAnswer2() {
         EditText answerField = (EditText) findViewById(R.id.textAnswer);
         String inputAnswer = answerField.getEditableText().toString();
         if (inputAnswer.equalsIgnoreCase("latvia")) {
+            rightAnswerCount++;
             return baseScore + 2;
         } else {
+            wrongAnswerCount++;
             return baseScore - 1;
         }
     }
 //    Displays the game result on the screen
-
     private void displayMessage(String message) {
         TextView answerSummaryTextView = (TextView) findViewById(R.id.results_text);
-//        answerSummaryTextView.setText(message); // Leaving this line intentionally, so I could get back to it fast
+        /* Leaving line below intentionally, so I could get back to it
+         * It can show results on the screen along with a Toast.
+         * Toast disappears, results stay
+         */
+//        answerSummaryTextView.setText(message);
         Toast.makeText(this, message, Toast.LENGTH_LONG).show();
     }
-
 //     Creates answer summary.
-
     private String createAnswerSummary(String inputName) {
         String resultsMessage = "Name: " + inputName;
         resultsMessage += "\nRight answers: " + rightAnswerCount + "\nWrong answers: " + wrongAnswerCount;
